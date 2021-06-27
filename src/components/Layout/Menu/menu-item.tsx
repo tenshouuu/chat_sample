@@ -10,7 +10,7 @@ interface Props extends RouteItem {
 export function MenuItem({ link, Icon, text, isActive }: Props): React.ReactElement {
 	return (
 		<Link passHref href={link} key={link}>
-			<MenuItemRoot>
+			<MenuItemRoot isActive={isActive}>
 				{isActive && (
 					<StyledMotion
 						className="nav-link-underline"

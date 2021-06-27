@@ -33,7 +33,7 @@ export const colors: Palette = {
 	primary: '#2A8BF2',
 	red: '#FF3366',
 	blue: '#0D1C2E',
-	dark: '0D1C2E',
+	dark: '#0D1C2E',
 	gray: '#707C97',
 	lightGray: '#E6ECFE',
 	semiLight: '#F3F3FB',

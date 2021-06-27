@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { getColor, getTypographyStyle } from 'theme';
 
@@ -9,14 +9,33 @@ export const ImageWrapper = styled.div`
 
 export const StyledMotion = styled(motion.div)`
 	height: 100%;
-	width: 2px;
+	width: 3px;
   position: absolute;
   top: 0;
   left: 0;
 	background-color: ${getColor('primary')};
+  box-shadow: 1px 0px 10px rgba(42, 139, 242, 0.45), 0px 0px 10px rgba(42, 139, 242, 0.55), 4px 0px 25px rgba(42, 139, 242, 0.75);
+  border-radius: 3px;
 `;
 
-export const MenuItemRoot = styled.a`
+export const Text = styled.div`
+	text-transform: uppercase;
+	font-weight: bold;
+	${getTypographyStyle('paragraph3')};
+`;
+
+const activeStyles = css`
+	& > ${Text} {
+  	color: ${getColor('primary')};
+  }
+
+  & > ${ImageWrapper} path,
+  & > ${ImageWrapper} rect {
+    fill: ${getColor('primary')};
+  }
+`
+
+export const MenuItemRoot = styled.a<{ isActive: boolean }>`
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -35,17 +54,8 @@ export const MenuItemRoot = styled.a`
 	}
 	
 	&:hover {
-		color: ${getColor('primary')};
-		
-		& > ${ImageWrapper} path,
-    & > ${ImageWrapper} rect {
-			fill: ${getColor('primary')};
-		}
+		${activeStyles};
 	}
-`;
-
-export const Text = styled.div`
-	text-transform: uppercase;
-	font-weight: bold;
-	${getTypographyStyle('paragraph3')};
+	
+	${({ isActive }) => isActive && activeStyles}
 `;
