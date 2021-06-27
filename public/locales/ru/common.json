@@ -1,1 +1,8 @@
-{}
+{
+  "Home": "Главная",
+  "Chats": "Чаты",
+  "Contacts": "Контакты",
+  "Notifications": "Уведомления",
+  "Calendar": "Календарь",
+  "Create new Chat": " Создать новый чат"
+}

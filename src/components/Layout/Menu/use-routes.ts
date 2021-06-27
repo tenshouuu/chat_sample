@@ -18,14 +18,14 @@ export function useRoutes(): RouteItem[] {
 			text: t('Home'),
 		},
 		{
-			link: '/chat',
+			link: '/chats',
 			Icon: Chat,
-			text: t('Chat'),
+			text: t('Chats'),
 		},
 		{
-			link: '/contact',
+			link: '/contacts',
 			Icon: Person,
-			text: t('Contact'),
+			text: t('Contacts'),
 		},
 		{
 			link: '/notifications',

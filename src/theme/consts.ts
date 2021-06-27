@@ -2,6 +2,8 @@ export type Color =
 	| 'primary'
 	| 'red'
 	| 'dark'
+	| 'darkBlue'
+	| 'lightBlue'
 	| 'gray'
 	| 'semiLight'
 	| 'lightGray'
@@ -32,7 +34,8 @@ export interface Theme {
 export const colors: Palette = {
 	primary: '#2A8BF2',
 	red: '#FF3366',
-	blue: '#0D1C2E',
+	darkBlue: '#0D1C2E',
+	lightBlue: '#7CB8F7',
 	dark: '#0D1C2E',
 	gray: '#707C97',
 	lightGray: '#E6ECFE',

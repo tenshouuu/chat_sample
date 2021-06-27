@@ -2,8 +2,8 @@ import React from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { GetStaticProps } from 'next';
 
-export default function Contact(): React.ReactElement {
-	return <>contact</>;
+export default function Contacts(): React.ReactElement {
+	return <>contacts</>;
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
